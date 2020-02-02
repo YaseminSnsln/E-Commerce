@@ -1,0 +1,66 @@
+.jumbotron
+{
+    background-image:linear-gradient(rgba(255,255,255,.25), rgba(255,255,255,.25)), url("../img/smoke-cloud.png");
+    background-size: cover;
+    height: 100%;
+}
+.card-title {
+    font-size: 16px;
+    font-weight: 400;
+    color: #484848;
+    line-height: 1.35em;
+    height: 34px;
+}
+.description {
+    font-size: 12px;
+    height: 40px;
+}
+.product-price {
+    color: #414141;
+    font-size: 17px;
+    font-weight: 700;
+}
+#product-details h1 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.product-image {
+    height: 300px;
+}
+#write-comment {
+    margin-left: -50px;
+}
+#product-price
+{
+    font-size: 28px;
+    color: orangered;
+}
+.list-img {
+    width: 254px;
+    height: 160px;
+}
+.icon
+{
+    height: 15px;
+    width: 15px;
+}
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+.footer {
+  background-color: #f5f5f5;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
