@@ -1,0 +1,74 @@
+﻿@model ECommerce.MvcWebUI.Models.ShippingDetails
+@{
+    ViewBag.Title = "Checkout";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Sipariş Bilgileriniz</h2>
+            <p>Lütfen sipariş bilgilerininizi doldurunuz.</p>
+            <hr />
+
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary()
+                <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-group">Kullanıcı Adı</label>
+                    <div class="col-sm-10">
+                        <span class="badge-danger">
+                            @User.Identity.Name
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-group">Adres Tanımı</label>
+                    <div class="col-sm-10">
+                        @Html.TextBoxFor(i => i.AddressTitle, new { @class = " form-control" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-group">Adres</label>
+                    <div class="col-sm-10">
+                        @Html.TextBoxFor(i => i.Address, new { @class = " form-control" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-group">Şehir</label>
+                    <div class="col-sm-10">
+                        @Html.TextBoxFor(i => i.City, new { @class = " form-control" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-group">Mahalle</label>
+                    <div class="col-sm-10">
+                        @Html.TextBoxFor(i => i.District, new { @class = " form-control" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-group">Sokak</label>
+                    <div class="col-sm-10">
+                        @Html.TextBoxFor(i => i.Street, new { @class = " form-control" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-group">Posta Kodu</label>
+                    <div class="col-sm-10">
+                        @Html.TextBoxFor(i => i.Postcode, new { @class = " form-control" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="" class="col-sm-2 col-form-group"></label>
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary">Adresi Kaydet</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
