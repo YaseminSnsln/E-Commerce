@@ -1,0 +1,19 @@
+﻿
+@using ECommerce.MvcWebUI.Models;
+@model Cart
+
+<style>
+    #cart-count
+    {
+        color: whitesmoke;
+    }
+</style>
+
+<ul class="navbar-nav my-2 my-lg-0">
+
+    <li id="cart-count" class="nav-item">
+        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+        (@Model.CartLines.Count)
+    </li>
+ 
+</ul>
