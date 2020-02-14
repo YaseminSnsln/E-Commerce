@@ -91,7 +91,8 @@ namespace ECommerce.MvcWebUI.Controllers
             order.OrderNumber = "A" + (new Random()).Next(11111, 99999).ToString();
             order.Total = cart.Count();
             order.OrderDate = DateTime.Now;
-            order.Username = shippingDetails.Username;
+            order.OrderState = EnumOrderState.Waiting;
+            order.Username = User.Identity.Name;
             order.AddressTitle = shippingDetails.AddressTitle;
             order.Address = shippingDetails.Address;
             order.City = shippingDetails.City;

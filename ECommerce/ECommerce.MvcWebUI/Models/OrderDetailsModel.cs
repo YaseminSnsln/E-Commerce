@@ -1,20 +1,20 @@
-﻿using System;
+﻿using ECommerce.MvcWebUI.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace ECommerce.MvcWebUI.Entity
+namespace ECommerce.MvcWebUI.Models
 {
-    public class Order
+    public class OrderDetailsModel
     {
-        public int Id { get; set; }
-
+        public int OrderId { get; set; }
+        public string Username { get; set; }
         public string OrderNumber { get; set; }
         public double Total { get; set; }
         public DateTime OrderDate { get; set; }
         public EnumOrderState OrderState { get; set; }
 
-        public string Username { get; set; }
         public string AddressTitle { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
@@ -22,21 +22,15 @@ namespace ECommerce.MvcWebUI.Entity
         public string Street { get; set; }
         public string Postcode { get; set; }
 
-        public virtual List<OrderLine> Orderlines { get; set; }
+        public virtual List<OrderLineModel> Orderlines { get; set; }
     }
-
-    public class OrderLine
+    public class OrderLineModel
     {
-        public int Id { get; set; }
-
-        public int OrderId { get; set; }
-        public virtual Order Order { get; set; }
-
+        public int ProductId { get; set; }
+        public string ProductName { get; set; }
+        public string Image { get; set; }
         public int Quantity { get; set; }
-
         public double Price { get; set; }
 
-        public int ProductId { get; set; }
-        public virtual Product Product { get; set; }
     }
 }
